@@ -3,9 +3,9 @@ import pandas as pd
 import datetime as dt
 import smtplib
 
-MY_EMAIL = os.environ.get("MY_EMAIL")
-MY_PASSWORD = os.environ.get("MY_PASSWORD")
 
+MY_EMAIL = os.getenv("FROM_MY_EMAIL")
+MY_PASSWORD = os.getenv("PASSWORD")
 # from main import birthday
 
 ##################### Extra Hard Starting Project ######################
