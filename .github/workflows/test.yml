@@ -23,23 +23,23 @@ jobs:
 
       - name: Check secrets are configured
         env:
-          MY_EMAIL: ${{ secrets.from_my_email }}
-          MY_PASSWORD: ${{ secrets.passwword }}
+          MY_EMAIL: ${{ secrets.FROM_MY_EMAIL }}
+          MY_PASSWORD: ${{ secrets.PASSWORD }}
         run: |
-          if [ -z "$from_my_email" ]; then
-            echo "from_my_email secret is not set!"
+          if [ -z "$FROM_MY_EMAIL" ]; then
+            echo "FROM_MY_EMAIL secret is not set!"
             echo "Go to Settings > Secrets > Actions and add it."
             exit 1
           else
-            echo "from_my_email is configured"
+            echo "FROM_MY_EMAIL is configured"
           fi
 
-          if [ -z "$passwword" ]; then
-            echo "passwword secret is not set!"
+          if [ -z "$PASSWORD" ]; then
+            echo "PASSWORD secret is not set!"
             echo "Go to Settings > Secrets > Actions and add it."
             exit 1
           else
-            echo "passwword is configured"
+            echo "PASSWORD is configured"
           fi
 
           echo ""
